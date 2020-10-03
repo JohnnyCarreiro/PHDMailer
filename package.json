@@ -1,0 +1,45 @@
+{
+  "name": "mailappv1.0.0",
+  "version": "1.0.0",
+  "description": "Simple way to send emails and save leads to database",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node run dev",
+    "build": "tsc -p ./",
+    "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/index.ts",
+    "production":"tsc && node ./dist/src/index.js",
+    "knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "typescript",
+    "nodemailer",
+    "email",
+    "database",
+    "SQL",
+    "db"
+  ],
+  "author": "Johnny Carreiro",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.6",
+    "nodemailer": "^6.4.11",
+    "pg": "^8.3.3",
+    "uuidv4": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/express": "^4.17.8",
+    "@types/knex": "^0.16.1",
+    "@types/nodemailer": "^6.4.0",
+    "rimraf": "^3.0.2",
+    "sqlite3": "^5.0.0",
+    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0-pre.63",
+    "typescript": "^4.0.3"
+  }
+}
